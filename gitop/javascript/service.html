@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Service workers</title>
+</head>
+<body>
+    <div id="result"></div>
+    <div id="remove"></div>
+    <div id="clear"></div>
+    <script>
+        var name={
+            fname:"indhu",
+            lname:"mathi",
+            age:22
+        }
+        localStorage.setItem('Fullname',JSON.stringify(name));
+        document.getElementById('result').innerHTML=JSON.parse(localStorage.getItem('Fullname'));
+        console.log(JSON.parse(localStorage.getItem('Fullname')))
+        document.getElementById('remove').innerHTML=localStorage.removeItem('name');
+        //document.getElementById('clear').innerHTML=localStorage.key();
+    </script>
+</body>
+</html>
